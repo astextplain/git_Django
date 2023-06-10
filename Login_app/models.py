@@ -13,6 +13,8 @@ class UserInfo(models.Model):
 # By doing this, you can store additional information about the user that is not part of the default User model fields.
     facebook_id =models.URLField(blank=True)
     profile_pic=models.ImageField(upload_to='profile_pics',blank=True)
+    
     #if you are working with image have to run commad pip install pillow
+    id = models.AutoField(primary_key=True)
     def __str__(self):
         return self.user.username
